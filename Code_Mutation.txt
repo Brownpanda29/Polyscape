@@ -1,0 +1,15 @@
+"Code mutation" refers to the process of changing the code of a program, such as malware, in order to produce a modified version of the code while preserving its core functionality. In the context of a polymorphic engine, code mutation is a fundamental step in creating polymorphic malware. Here's what it involves:
+
+1. **Changing Instructions**: The polymorphic engine can alter the order or sequence of instructions within the code. For example, it may rearrange the order of operations without changing the overall function of the code.
+
+2. **Substitution of Instructions**: Some instructions within the code may be replaced with other instructions that achieve the same effect. This involves substituting one instruction with another that performs an equivalent operation.
+
+3. **Variable and Function Renaming**: Variable names, function names, and other identifiers within the code can be changed. This can make it harder to identify specific elements of the code and its functionality.
+
+4. **Obfuscation**: Code obfuscation techniques can be applied to make the code less readable and harder to understand. This includes adding redundant or unnecessary code, making the code more complex.
+
+5. **Inserting Redundancy**: Additional, seemingly redundant code can be added to the program, which doesn't affect the core functionality but adds complexity to the code.
+
+6. **Randomization**: Some polymorphic engines introduce elements of randomness in the mutation process, creating variations that are not predictable.
+
+The purpose of code mutation in a polymorphic engine is to generate new, unique versions of the malware with each iteration. These variations have different code structures but maintain the same core functionality, making it difficult for security software to detect and block the malware based on static signatures. The constantly changing code structure is a key feature of polymorphic malware and a tactic used to evade detection.
