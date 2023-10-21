@@ -1,0 +1,15 @@
+A decryption routine in the context of a polymorphic engine is a specific part of the malware code that is responsible for decrypting the encrypted portions of the malware just before execution. This routine is a critical component of polymorphic malware and serves to obscure the malicious code until it's ready to run. Here's how the decryption routine works within a polymorphic engine:
+
+1. **Encryption**: The malware's code contains encrypted sections, usually selected for the most critical parts of the malware's functionality. These sections are encrypted using a specific encryption algorithm and keys.
+
+2. **Decryption Routine**: The malware includes a decryption routine, often written in assembly language or another low-level language for efficiency and obfuscation.
+
+3. **Execution Trigger**: The decryption routine is executed as a part of the malware's execution process. It's typically one of the first steps in the code's execution.
+
+4. **Decryption Process**: The decryption routine uses the encryption keys (which are usually stored within the malware) to decrypt the encrypted sections of the code. This transforms the ciphertext back into the original, executable code.
+
+5. **Runtime Execution**: Once the decryption process is complete, the decrypted code is ready for execution. The malware now performs its malicious functions, which could include actions like data theft, system compromise, or further propagation.
+
+The decryption routine is crucial for polymorphic malware because it ensures that the actual malicious code remains hidden until runtime. Security software may struggle to detect the malware based on static analysis because it sees only the encrypted, unreadable code.
+
+It's important to note that the decryption routine is typically small and efficient to avoid attracting attention or detection. Additionally, the entire polymorphic process, including encryption and decryption, is automated by the polymorphic engine during the development phase, so the end user doesn't interact with these routines directly.
