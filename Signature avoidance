@@ -1,0 +1,17 @@
+Signature avoidance is a critical aspect of polymorphic malware and is achieved through various techniques within a polymorphic engine. The primary goal is to create malware variants that do not match known static signatures used by security software for detection. Here's how signature avoidance works in a polymorphic engine:
+
+1. **Code Mutation**: As previously discussed, code mutation involves altering the code of the malware. The polymorphic engine changes the structure of the code while maintaining its functionality, which leads to variations that do not match known signatures.
+
+2. **Encryption**: Encrypting sections of the code makes it difficult for security software to analyze the code statically. Encrypted code appears as random data, and static signatures cannot be created based on this data.
+
+3. **Dynamic Behavior**: Polymorphic malware often exhibits dynamic behavior. It may delay its malicious actions, act benign for a period, or use randomized timings to avoid predictability. Dynamic behavior makes it challenging to create static signatures.
+
+4. **Randomization**: Adding random elements to the code structure and control flow makes each malware variant unique. This randomization prevents the creation of fixed signatures for specific patterns.
+
+5. **Variable and Function Renaming**: Changing variable and function names makes it difficult to recognize specific parts of the code, and hence, static signatures become less effective.
+
+6. **Data Encoding**: Encoding parts of the code can result in different data representations, which are not easily matched to known signatures.
+
+7. **Fileless Techniques**: Some polymorphic malware operates without leaving a footprint on the system's storage, making it challenging for security software to detect and analyze.
+
+By constantly changing the code structure, behavior, and other characteristics, polymorphic malware aims to avoid detection based on static signatures, which are signatures created for known malware patterns. Instead, security software has to rely on heuristic analysis, behavioral monitoring, anomaly detection, and other advanced techniques to identify and mitigate these ever-evolving threats.
