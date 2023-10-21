@@ -1,0 +1,17 @@
+In a polymorphic engine, encryption is one of the techniques used to make the malware more difficult to detect by security software. Here are the steps involved in applying encryption within a polymorphic engine:
+
+1. **Select Encryption Algorithm**: Choose an encryption algorithm, such as a symmetric cipher (e.g., AES, DES) or an asymmetric cipher (e.g., RSA), to encrypt portions of the malware's code.
+
+2. **Define Encryption Keys**: Generate encryption keys. For symmetric encryption, a single key is used for both encryption and decryption. For asymmetric encryption, there are public and private keys. These keys will be used to encrypt and decrypt the code.
+
+3. **Identify Code Segments**: Determine which parts of the malware's code will be encrypted. Usually, these are sections that contain critical functionality.
+
+4. **Encrypt the Code**: Apply the chosen encryption algorithm to the identified code segments. The code is transformed into a ciphertext that appears as random data.
+
+5. **Insert Decryption Routine**: Include a decryption routine within the malware. This routine will be responsible for decrypting the encrypted code just before execution.
+
+6. **Encrypt Encryption Keys**: In some cases, the encryption keys themselves might be encrypted or obfuscated to add an extra layer of protection.
+
+7. **Dynamic Decryption**: When the malware runs, the decryption routine is executed first to decrypt the encrypted code segments, making the code executable. The encryption keys are used for this purpose.
+
+The encryption process ensures that the actual functionality of the malware remains hidden until it's executed. This complexity can make it challenging for security software to analyze and detect the malicious code. When the encryption is combined with other polymorphic techniques, such as code mutation and randomization, it further enhances the malware's ability to evade detection.
